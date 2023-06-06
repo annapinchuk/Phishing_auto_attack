@@ -1,4 +1,8 @@
-# Phishing_auto_attack
+# Phishing auto attack
+
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/phishing_lure.jpg" width="1000" height="260" />
+
+
 ## Anna pinchuk , Zohar Simhon
 ## Description
 The attacker seeks to breach the corporate perimeter and gain a persistent foothold in the environment.
