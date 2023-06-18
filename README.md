@@ -49,7 +49,7 @@ current attack works on windows and linux
     ```
     python3 Phishing.py
 ## Usage
-
+pls make sure that your email עives access permission to receive photos by email
 Provide instructions and examples for use. Include screenshots as needed.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
