@@ -25,12 +25,21 @@ if (int(kidsNumber) > 0):
     html_file_path = "html_files/epic_games/epic.html"
 
 match jobTitle:
-    case "student":
+    case "Student":
         subject = "Student!"
-        html_file_path = "html_files/microsoft.html"
-    case "programmer":
+        html_file_path = "html_files/moodle.html"
+    case "Programmer":
         subject = "Programmer!"
         html_file_path = "html_files/linkedin.html"
+    case "Lecturer" :
+        subject = "Lecturer!"
+        html_file_path = "html_files/microsoft.html"
+    case "Doctor":
+        subject = "Doctor!"
+        html_file_path = "html_files/microsoft.html"
+    case "Professor":
+        subject = "Professor!"
+        html_file_path = "html_files/microsoft.html"
     case "Atudai":
         subject = "Atudai!"
         html_file_path = "html_files/body.html"
