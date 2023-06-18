@@ -12,10 +12,14 @@ encrypt = input("Do you want to encrypt the data <bool>: ")
 
 html_file_path = "html_files/body.html"
 subject = "body!"
+username = 'test1232023@outlook.co.il'
+password = 'dlemjs3129'
 
 if (int(kidsNumber) > 0):
     subject = "Parent!"
     html_file_path = "html_files/epic_games/epic.html"
+    username = 'test1232023@outlook.co.il'
+    password = 'dlemjs3129'
 
 match jobTitle:
     case "student":
@@ -40,4 +44,4 @@ recipient = username + "@" + mailServiceName
 with open(html_file_path, 'r', encoding="utf-8") as file:
     body = file.read()
 
-send_email(subject, body, recipient, attachment_path)
+send_email(subject, body, recipient, attachment_path, username, password)

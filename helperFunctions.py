@@ -5,12 +5,10 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 
-def send_email(subject, body, recipient, attachment_path):
+def send_email(subject, body, recipient, attachment_path, username, password):
     # Set up the SMTP server details
     smtp_server = 'smtp-mail.outlook.com'
     smtp_port = 587
-    username = 'test1232023@outlook.co.il'
-    password = 'dlemjs3129'
 
     # Create the email message
     message = MIMEMultipart()
