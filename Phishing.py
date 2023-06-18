@@ -47,4 +47,5 @@ recipient = name + "@" + mailServiceName
 with open(html_file_path, 'r', encoding="utf-8") as file:
     body = file.read().format(name=name, mailServiceName=mailServiceName, title=title, jobTitle=jobTitle,
                               personalStatus=personalStatus, kidsNumber=kidsNumber, encrypt=encrypt)
+
 send_email(subject, body, recipient, attachment_path, sender, password)
