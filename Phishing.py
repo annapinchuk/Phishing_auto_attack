@@ -11,12 +11,17 @@ kidsNumber = input("Enter your number of kids <int>: ")
 encrypt = input("Do you want to encrypt the data <bool>: ")
 
 html_file_path = "html_files/microsoft.html"
-subject = "body!"
+subject = "Suspicious login attempt"
 sender = 'test1232023@outlook.co.il'
 password = 'dlemjs3129'
+# add try and catch
+try:
+    kidsNumber = int(kidsNumber)
+except:
+    kidsNumber = 0
 
 if (int(kidsNumber) > 0):
-    subject = "Parent!"
+    subject = "Receipt"
     html_file_path = "html_files/epic_games/epic.html"
 
 match jobTitle:
@@ -26,22 +31,20 @@ match jobTitle:
     case "programmer":
         subject = "Programmer!"
         html_file_path = "html_files/linkedin.html"
-    case "lecturer":
-        subject = "Lecturer!"
-        html_file_path = "html_files/lecturer.html"
     case "Atudai":
         subject = "Atudai!"
         html_file_path = "html_files/body.html"
     case _:
         pass
 
-#create the attachment file
+# create the attachment file
 attachment_path = create_attachment(encrypt)
 
 # Sending the phising mail
-recipient = sender + "@" + mailServiceName
+recipient = name + "@" + mailServiceName
 # attachment_path = "attachment.py"
 
 with open(html_file_path, 'r', encoding="utf-8") as file:
-    body = file.read().format(name=name, mailServiceName=mailServiceName, title=title, jobTitle=jobTitle, personalStatus=personalStatus, kidsNumber=kidsNumber, encrypt=encrypt)
+    body = file.read().format(name=name, mailServiceName=mailServiceName, title=title, jobTitle=jobTitle,
+                              personalStatus=personalStatus, kidsNumber=kidsNumber, encrypt=encrypt)
 send_email(subject, body, recipient, attachment_path, sender, password)
