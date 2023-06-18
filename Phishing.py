@@ -8,7 +8,7 @@ title = input("Enter your title <String>: ")
 jobTitle = input("Enter your job title <String>: ")
 personalStatus = input("Enter your personal status <String>: ")
 kidsNumber = input("Enter your number of kids <int>: ")
-encrypte = input("Do you want to encrypt the data <bool>: ")
+encrypt = input("Do you want to encrypt the data <bool>: ")
 
 html_file_path = "html_files/body.html"
 subject = "body!"
@@ -31,7 +31,7 @@ match jobTitle:
         pass
 
 #create the attachment file
-attachment_path = create_attachment(encrypte)
+attachment_path = create_attachment(encrypt)
 
 # Sending the phising mail
 recipient = username + "@" + mailServiceName

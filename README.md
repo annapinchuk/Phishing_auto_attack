@@ -38,6 +38,7 @@ we are going to use the personal data given as input (pls see usege sector)
  - job title - custome phising based on job (Student, Lecturer/Doctor/Professor, Atudai, proggramer and others)
  -  personal status - (married, single and other)
  -  kids/no kids  - (estimated ages)
+ - encrypt/ not encrypt - for testing, if you want to encrypt the data in the dns tunneling
 
 
 ## Installation
