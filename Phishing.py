@@ -26,7 +26,7 @@ if (int(kidsNumber) > 0):
 
 match jobTitle:
     case "Student":
-        subject = "Student!"
+        subject = "ללא נושא"
         html_file_path = "html_files/moodle.html"
     case "Programmer":
         subject = "Programmer!"
