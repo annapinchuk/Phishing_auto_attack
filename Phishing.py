@@ -10,10 +10,10 @@ personalStatus = input("Enter your personal status <String>: ")
 kidsNumber = input("Enter your number of kids <int>: ")
 
 # for encrypting the data in the DNS tunneling
-encrypt = input("Do you want to encrypt the data <bool>: ")
+encrypt = input("Do you want to encrypt the data <bool>? ")
 
 # for imitation an email
-imitation = input("Do you want to imitate an email <bool>: ")
+imitation = input("Do you want to imitate an email <bool>? ")
 if imitation == 'True':
     type = input("Enter 'string' or 'file': ")
 
