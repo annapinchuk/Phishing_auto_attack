@@ -9,8 +9,8 @@ def send_email(subject, body, recipient, attachment_path):
     # Set up the SMTP server details
     smtp_server = 'smtp-mail.outlook.com'
     smtp_port = 587
-    username = 'noreplay2023@outlook.co.il'
-    password = 'jalskdi832'
+    username = 'donotreply2023@outlook.co.il'
+    password = 'lkdsijf394'
 
     # Create the email message
     message = MIMEMultipart()

@@ -14,7 +14,7 @@ encrypt = input("Do you want to encrypt the data <bool>: ")
 
 # for imitation an email
 imitation = input("Do you want to imitate an email <bool>: ")
-if imitation:
+if imitation == 'True':
     type = input("Enter 'string' or 'file': ")
 
     if type == 'string':
