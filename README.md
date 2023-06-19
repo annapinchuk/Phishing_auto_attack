@@ -14,43 +14,73 @@ The attacker is often impersonating an authorized user. Therefore it is very dif
 
 
 In this lab we create a phishing email that includes covert channel.
-- Email provider we used: TODO:HERE
+- Email provider we used: outlook (noreplay2023@outlook.co.il)
+  
 We will automate this process.
-Creates a python script which imitates a phishing attack.
- - First stage: It receives an input of: Username, mail service name, title, job title, personal status, kids/no kids (estimated ages). 
+Creating a python script which imitates a phishing attack.
+ - First stage: It receives an input of: Username, mail service name, title, job title, personal status, number of kids. 
  - Second stage: Your manager wants an upgrade for the attack tool. You will receive a benign email as a possible last input and try to imitate it. The email is from the employee’s boss, Joseph. The email can be received a txt file or a string. We will merge the emails.
- - Third stage: Check your findings on a VM. Open an email in a non-so-secure mail service and run your script. One VM will be the attacker, the other one will be a victim. See if the victim receives the email correctly. (see usege examples)
+ - Third stage: Open an email in a non-so-secure mail service and run your script. See if the victim receives the email correctly. (see tests section)
  
 
 The covert channel will do the following steps:
  - Stage one: Get the password file, current username, IP, available languages, OS version.
- - Stage two: Send data through DNS queries to a local server. The server’s IP is (TODO:HERE).
+ - Stage two: Send data through DNS queries to a local server. The server’s IP is (127:00:1).
 These operations will start after downloading the attachment of the email.
-The script should run on Linux/WIN .
+Our script will run on Linux and WIN .
 
 
 
 ## Phishing auto attack based on personal info :
 we are going to use the personal data given as input (pls see usege sector)
- - username - HI "username" without special characters
- - mail service name - (gmail.com)
+ - username - username without special characters
+ - mail service name - for example (gmail.com)
  - title - (Mr,Ms,Mrs,Professor,Doctor and other)
  - job title - custome phising based on job (Student, Lecturer/Doctor/Professor, Atudai, proggramer and others)
  -  personal status - (married, single and other)
- -  kids/no kids  - (estimated ages)
- - encrypt/ not encrypt - for testing, if you want to encrypt the data in the dns tunneling
+ -  number of kids
+ - encrypt/ not encrypt - if you want to encrypt the data in the dns tunneling
+ - received txt file or a string of previous email
 
 
 ## Installation
 current attack works on windows and linux 
+
+pls make sure that your email gives access permission to receive photos by email
  - install the zip of the repository
+ - install scapy
+ - make sure you have the latest version of python
+    
+## Usage
  - open terminal 
  - run
     ```
     python3 Phishing.py
-## Usage
-pls make sure that your email עives access permission to receive photos by email
-Provide instructions and examples for use. Include screenshots as needed.
+
+  in the input insert:
+ - username - username of your email without special characters
+ - mail service name - for example (gmail.com)
+ - title - (Mr,Ms,Mrs,Professor,Doctor and other)
+ - job title - custome phising based on job (Student, Lecturer/Doctor/Professor, Atudai, proggramer and others)
+ - personal status - (married, single and other)
+ - number of kids - (0 if none)
+ - encrypt/ not encrypt - if you want to encrypt the data in the dns tunneling enter 1 otherwise 0
+ - enter 1 if you want to imitate an email otherwise enter 0
+ - if you entered 1 -  enter "string" or name of the file
+
+ You should get an email custumed to the data you inserted.
+ 
+ Example of an input :
+ ```
+ sss
+ gmail.com
+ Mr
+ Student
+ married
+ 2
+ 0
+ 0
+  ```
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
@@ -59,15 +89,15 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ```
 
 ## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
-
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+This lab is for a cyber attack course at Ariel University according to Harel Berger's presentation 
 
 ## Tests
+All the emails available:
+for Atudai:
+for person with kids:
+for student:
+for proggramer:
+for others:
 
-
+screenshots of the DNS tunneling when encrypted 
+screenshots of the DNS tunneling with no encryption:
