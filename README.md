@@ -1,6 +1,6 @@
 # Phishing auto attack
 
-<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/phishing_lure.jpg" width="1000" height="260" />
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/imeges/phishing_lure.jpg" width="1000" height="260" />
 
 
 ## Anna pinchuk , Zohar Simhon
@@ -14,7 +14,7 @@ The attacker is often impersonating an authorized user. Therefore it is very dif
 
 
 In this lab we create a phishing email that includes covert channel.
-- Email provider we used: outlook (noreplay2023@outlook.co.il)
+- Email provider we used: outlook (donotreply2023@outlook.co.il)
   
 We will automate this process.
 Creating a python script which imitates a phishing attack.
@@ -64,11 +64,12 @@ pls make sure that your email gives access permission to receive photos by email
  - job title - custome phising based on job (Student, Lecturer/Doctor/Professor, Atudai, proggramer and others)
  - personal status - (married, single and other)
  - number of kids - (0 if none)
- - encrypt/ not encrypt - if you want to encrypt the data in the dns tunneling enter 1 otherwise 0
- - enter 1 if you want to imitate an email otherwise enter 0
- - if you entered 1 -  enter "string" or name of the file
+ - encrypt/ not encrypt - enter True if you want to encrypt the data in the dns tunneling otherwise press enter
+ - enter True if you want to imitate an email otherwise press enter
+ - if you entered True - enter "string" or "file"
+ - if you entered 'file' - enter the file's name
 
- You should get an email custumed to the data you inserted.
+ You should get an email custumed to the data you inserted(Examples in Test section).
  
  Example of an input :
  ```
@@ -82,22 +83,36 @@ pls make sure that your email gives access permission to receive photos by email
  0
   ```
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
 ## Credits
 This lab is for a cyber attack course at Ariel University according to Harel Berger's presentation 
 
 ## Tests
-All the emails available:
+All the emails available: 
+
 for Atudai:
+
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/imeges/Atudai.jpeg" width="250" height="500" />
+
 for person with kids:
+
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/imeges/kids.jpeg" width="250" height="500" />
+
 for student:
+
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/imeges/student.jpeg" width="250" height="500" />
+
 for proggramer:
+
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/imeges/programmer.jpeg" width="250" height="500" />
+
 for others:
 
-screenshots of the DNS tunneling when encrypted 
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/imeges/default.jpeg" width="250" height="500" />
+
+screenshots of the DNS tunneling when encrypted:
+
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/imeges/encrypted.png" width="500" height="250" />
+
 screenshots of the DNS tunneling with no encryption:
+
+<img src="https://github.com/annapinchuk/Phishing_auto_attack/blob/main/imeges/not_encrypted.png" width="500" height="250" />
