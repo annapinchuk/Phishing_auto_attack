@@ -63,15 +63,6 @@ else:
         case "Programmer":
             subject = "Programmer!"
             html_file_path = "html_files/linkedin.html"
-        case "Lecturer":
-            subject = "Lecturer!"
-            html_file_path = "html_files/microsoft.html"
-        case "Doctor":
-            subject = "Doctor!"
-            html_file_path = "html_files/microsoft.html"
-        case "Professor":
-            subject = "Professor!"
-            html_file_path = "html_files/microsoft.html"
         case "Atudai":
             subject = "Atudai!"
             html_file_path = "html_files/body.html"
